@@ -100,7 +100,7 @@ const HomePage = () => {
           {/* Danh sách */}
           <TaskList render={render} data={visit} filter={filter} />
           {/* Chân trang */}
-          <div className="flex justify-between p-5 gap-10">
+          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
             <TaskPagination
               page={page}
               setPage={setPage}
@@ -108,7 +108,7 @@ const HomePage = () => {
               handleNext={handleNext}
               handlePrev={handlePrev}
             />
-            <DateTime date={date} setDate={setDate} />
+            <DateTime className="" date={date} setDate={setDate} />
           </div>
 
           <Footer activeCount={activeCount} completedCount={completeCount} />
