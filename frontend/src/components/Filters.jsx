@@ -6,7 +6,7 @@ import { Filter } from "lucide-react";
 
 const Filters = ({ completeCount = 0, activeCount = 0, filter, setFilter }) => {
   return (
-    <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+    <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
       {/* thong ke */}
       <div className="flex gap-3">
         <Badge
@@ -17,13 +17,13 @@ const Filters = ({ completeCount = 0, activeCount = 0, filter, setFilter }) => {
         </Badge>
         <Badge
           variant="secondary"
-          className="bg-white/50 text-accent-foreground border-info/20 bg-sky-200"
+          className="bg-white/50 text-success border-info/20 bg-sky-100"
         >
           {completeCount} {FilterType.completed}
         </Badge>
       </div>
       {/* bo loc */}
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex gap-1 flex-row">
         {Object.keys(FilterType).map((item) => (
           <Button
             key={item}

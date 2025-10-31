@@ -45,7 +45,11 @@ const AddTask = ({ render }) => {
           }}
           onKeyPress={handleEnter}
         />
-        <Button className="px-6 " onClick={addTask} disabled={!newTask.trim()}>
+        <Button
+          className="px-6 w-full sm:w-auto"
+          onClick={addTask}
+          disabled={!newTask.trim()}
+        >
           <Plus className="size-5" />
           Thêm
         </Button>
